@@ -1,15 +1,8 @@
-// code will work firsttime two test second time please follow below caution
-//even after you refresh there is still data in local storage,  Please clear local storage everytime you test.. after clearing local storage refresh again.
-// inspect => >> => application
+// Please remove local storage data then refresh to restart again or just start from first image without any refresh.
 
 "use strict";
 
-let status1 = true;
-let status2 = false;
-let status3 = false;
-let status4 = false;
-
-let currentImg = "img-1";
+let currentImg = "img-1"; // local storage reference
 
 (function () {
   const stage = localStorage.getItem("stage");
@@ -190,3 +183,7 @@ function checkFunction() {
   final.innerHTML = `Your token is ${token.slice(0, 12)}`;
   document.body.appendChild(final);
 }
+
+// code will work firsttime two test second time please follow below caution,
+//even after you refresh there is still data in local storage,  Please clear local storage everytime you test.. after clearing local storage refresh again.
+// inspect => >> => application
