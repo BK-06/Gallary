@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>form</title>
+  </head>
+  <body>
+    <div class="form-div">
+      <label for="name">Please enter your Name :</label>
+      <input type="text" name="name" class="inputs" />
+      <br />
+      <label for="userName">Please enter your User Name :</label>
+      <input type="text" name="userName" class="inputs" />
+      <br />
+      <label for="Email">Pleae enter your Email :</label>
+      <input type="text" name="Email" class="inputs" />
+      <button class="btn" id="btn">Submit</button>
+    </div>
+    <script>
+      let btnEl = document.getElementById("btn");
+      btnEl.addEventListener("click", storeItems);
+      let arr = [];
+      function storeItems() {
+        let obj = {};
+        const inputs = document.querySelectorAll(".inputs");
+        let i = 0;
+        for (let [i, el] of inputs.entries()) {
+          obj[i++] = el.value;
+        }
+        // console.log(obj);
+        arr.push(obj);
+        // console.log(arr);
+        localStorage.setItem("data", JSON.stringify(arr));
+        localStorage.setItem("stage", "img-2");
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

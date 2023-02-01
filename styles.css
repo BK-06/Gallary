@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img-div {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  padding: 3%;
+  width: 100px;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.btn {
+  align-self: center;
+  margin: 2%;
+  padding: 2%;
+  width: 20%;
+}
+
+.dice-images {
+  display: flex;
+  flex-direction: row;
+}
+
+.dice-msg {
+  color: red;
+  align-self: center;
+}
+
+.dice-roll {
+  color: red;
+  align-self: center;
+}
+
+.success {
+  color: red;
+  align-self: center;
+}
+
+.hidden {
+  display: none;
+}
