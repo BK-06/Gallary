@@ -166,6 +166,7 @@ function rollFunction() {
 imageFourth.addEventListener("click", checkFunction);
 function checkFunction() {
   validateImageClick(4);
+  setStage(1);
   if (sum <= 10) {
     return window.alert(
       "Since Your three rolls total is less than 10, please restart from 3rd Image."
